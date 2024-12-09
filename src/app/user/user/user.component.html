@@ -1,0 +1,28 @@
+<h4>{{user?.name}}'s Details </h4>
+<table class="table">
+
+  <tbody>
+    <tr>
+      <th scope="row">Full Name</th>
+      <td>{{user?.name}}</td>
+    </tr>
+    <tr>
+      <th scope="row">User Name</th>
+      <td>{{user?.username}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Email </th>
+      <td>{{user?.email}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Phone </th>
+      <td>{{user?.phone}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Website </th>
+      <td> <a [href]="'http://'+user?.website" target="_blank" rel="noopener noreferrer">{{user?.website}}</a> </td>
+    </tr>
+
+
+  </tbody>
+</table>

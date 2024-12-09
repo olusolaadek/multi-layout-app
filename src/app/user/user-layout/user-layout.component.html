@@ -1,0 +1,35 @@
+<div class="container container-fluid">
+  <app-header></app-header>
+
+  <main class="row row-cols-2">
+    <div class="col col-3 border border-end mt-3 p-md-3" style="min-height: 50vh;">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link" routerLinkActive="active">Home</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" routerLinkActive="active">Select User Posts</a>
+          <hr class="table-group-divider">
+        </li>
+        @for (post of userPosts; track post.id) {<li class="nav-item">
+          <!-- <a [routerLink]="['/user/posts', post.id]" class="nav-link" routerLinkActive="active"> {{post.title}}</a> -->
+          <a [routerLink]="['/user',post.userId, post.id]" class="nav-link" routerLinkActive="active">
+            {{post.title}}</a>
+        </li>}
+
+      </ul>
+    </div>
+    <div class="col col-9 mt-3 p-md-3">
+      <router-outlet>
+
+      </router-outlet>
+    </div>
+
+  </main>
+
+
+  <app-footer>
+
+  </app-footer>
+</div>

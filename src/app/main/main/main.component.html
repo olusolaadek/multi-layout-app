@@ -1,0 +1,28 @@
+<h2>My Store App</h2>
+<p class="lead">
+
+  Welcome to My Store Page
+</p>
+
+<p>I hope you will enjoy the offers. Your feedback is also appreciated.</p>
+
+<div>
+  <h4>Users List</h4>
+  <hr>
+  <div class="row">
+
+    @for (user of users; track user.id) {
+    <div class="col col-3 border m-1 p-1 link-primary " [routerLink]="['user', user.id]">
+
+      <h4 class="text-black"> {{ user.name }}</h4>
+
+      <a>View Comment{{user.username}} </a>
+
+    </div>
+    }
+
+
+  </div>
+
+
+</div>
