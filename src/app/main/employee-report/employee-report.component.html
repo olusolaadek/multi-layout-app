@@ -1,0 +1,19 @@
+<h3>Employees Report</h3>
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let col of allColumns"><label>
+          <input type="checkbox" [(ngModel)]="col.selected" (change)="updateVisibleColumns()" />
+          {{ col.name }}
+        </label></th>
+    </tr>
+  </thead>
+
+
+
+</table>
+<ngx-datatable class="bootstrap" [rows]="rows" [columns]="visibleColumns" [columnMode]="'force'" [headerHeight]="50"
+  [footerHeight]="50" [rowHeight]="'auto'">
+</ngx-datatable>
+
+<button (click)="exportToCSV()">Export to CSV</button>

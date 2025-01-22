@@ -1,0 +1,18 @@
+<h4>Select month(s)</h4>
+<hr>
+<form [formGroup]="monthForm" (ngSubmit)="onSubmit()">
+  <label for="months">Choose months:</label>
+  <ng-multiselect-dropdown [placeholder]="'select month(s)'" [settings]="dropdownSettings" [data]="months"
+    formControlName="monthList">
+
+  </ng-multiselect-dropdown>
+  <!-- <select id="months" formControlName="selectedMonths" class="form-control" multiple>
+    <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+  </select> -->
+  <!-- <div class="form-check" *ngFor="let month of months">
+    <input class="form-check-input" aria-label="month" type="checkbox" [id]="month" formControlName="selectedMonths" />
+    <label class="form-check-label" [for]="month">{{ month.name }}</label>
+  </div> -->
+  <div>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </div>

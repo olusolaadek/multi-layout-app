@@ -20,10 +20,7 @@ export class UserComponent {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['userId'];
     this.userService.setCurrentUser(+this.id);
-    // this.route.paramMap.subscribe((params) => {
-    //   console.log(params);
-    //   console.log(this.route.snapshot.data);
-    // });
+
     this.getUserDetailsAndPost();
   }
 

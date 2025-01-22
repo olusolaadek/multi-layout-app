@@ -18,7 +18,7 @@ export class UserLayoutComponent implements OnInit {
   ngOnInit(): void {
     // this.id = this.route.snapshot.params['id'];
 
-    //?? this.route?.firstChild?.snapshot.params['id'];
+    // ?? this.route?.firstChild?.snapshot.params['id'];
     this.route.firstChild?.paramMap
       .pipe(
         map((par) => {

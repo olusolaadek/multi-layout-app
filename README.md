@@ -6,6 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 https://stackoverflow.com/questions/73178115/multi-layout-angular
 
+- Multiselect dropdown
+  https://www.c-sharpcorner.com/article/multi-select-dropdown-in-angular/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

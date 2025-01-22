@@ -7,10 +7,11 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, NgxDatatableModule],
   providers: [provideHttpClient(withInterceptorsFromDi())],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
