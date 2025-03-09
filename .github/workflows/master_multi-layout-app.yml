@@ -12,9 +12,13 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    strategy:
+      matrix:
+        slot: [prod, dev, qa]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: checkout code
+        uses: actions/checkout@v4
 
       - name: Set up Node.js version
         uses: actions/setup-node@v3
